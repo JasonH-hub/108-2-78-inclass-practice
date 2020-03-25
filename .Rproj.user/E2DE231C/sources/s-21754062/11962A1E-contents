@@ -2,6 +2,12 @@
 title: "practice2 3/17 level3"
 output: html_document
 ---
+```{r}
+```
+
+
+```{r}
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
