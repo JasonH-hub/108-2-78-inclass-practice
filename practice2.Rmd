@@ -32,13 +32,13 @@ install.packages(c("googlesheets4","tidyverse"))
 ```{r}                                                                      
                                                                                 #have problem
 my_108_total_credits <- 15
-_108_total_credits <- 15
-108_total_credits <- 15
-_my_108_total_credits <- 15
-my.108.total_credits <- 15
-.108.total_credits <- 15 # 隱藏變數
+`108_total_credits` <- 15                                          #數字開頭時，前面要加上反頓點，最後也要記得加反頓點
+`108_total_credits` <- 15
+my_108_total_credits <- 15
+my.108.total_credits <- 15                                         #"_"不能放在開頭
+`108.total_credits` <- 15 # 隱藏變數
 .my.108.total_credits <- 15
-我的108學年總學分數 <- 15
+`我的108學年總學分數` <- 15                                         #開頭不能為中文
 `我的108學年總學分數` <- 15 # 特殊名稱處理，`不是名稱的一部份
 `.108.total_credits` <- 15
 ```
@@ -82,8 +82,8 @@ vNum4 <- c(vNum4, vNum1) # 向量疊代 （recursive vector concatenate
 ## Numeric                                                                     hAVE PROBLEM
 
 ```{r}
-num1<-5 # 非整數
-num2<-5L # 整數
+num1<-5 # 非整數                                               #5.0000不是整數嗎?
+num2<-5L # 整數                                                
 
 num1Vector<-c(5,6,7)
 num2Vector<-c(5L,6L,7L)
@@ -103,16 +103,18 @@ char1Vector<-c("你好","How are you?")
 ```{r}
 dialogue <- c('小明說："明天不用上課。"',
                '小花說："真的嗎？"')
-
-cat(dialogue, sep="\n")                                                         # have problem  取消分行的意思?
+cat(dialogue, sep="\n")                                     
+                    # have problem  取消分行的意思?
 ```
+
 ```{r}
-library(httr)                                                                   #library五行的意思?
+library(httr)
 library(dplyr)
 GET("https://api.github.com/repos/tpemartin/108-2-56-inclass-practice/commits") %>%
   content() %>%
   View()
 ```
+
 ```{r}
 library(googlesheets4)
 `出席狀況表單網址` <-"https://docs.google.com/spreadsheets/d/1oB-5hj1pO5g8FMpZbA7RgIG8NvCRx6WvLPwvleCEV4Q/edit#gid=987577191"
@@ -127,11 +129,11 @@ logi1 <- c(T,TRUE,F,FALSE,FALSE)
 
 ```{r}
 num <- c(1.5, 2, 3)
-int <- c(1L, 3L, -2L)
+int <- c(1L, 3L, -2L)                                                
 char <- c("1.5","2","3")
 logi <- c(T,T,F)
 
-typeof(num)
+typeof(num)                                                                  
 typeof(int)
 typeof(char)
 typeof(logi)

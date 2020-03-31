@@ -1,0 +1,162 @@
+---
+title: "practice3 3/25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Atomic vector
+```{r}
+c("aa","bb","cc")
+```
+
+```{r}
+c("小明的年紀","15")
+```
+```{r}
+# 10位學生的主系
+majors10_char <- c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+
+typeof(majors10_char)
+class(majors10_char)
+```
+
+```{r}
+majors10_factor <- factor(majors10_char)                           #若要執行此行程式，需要先執行40行的程式?   YES
+# 或
+```
+
+```{r}
+
+majors10_factor <- factor(
+  c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+)
+
+typeof(majors10_factor)
+class(majors10_factor)
+```
+
+```{r}
+levels(majors10_factor)                                        
+```
+
+```{r}
+stringInteger <- c(1,2,-11)
+class(stringInteger) # 無法進行數值運算
+stringInteger+2
+```
+
+```{r}
+stringInteger <- c("1","2","-11")                                   #此行是字串，字串跟字串不能相加減，所以要把字串轉換成數字
+class(stringInteger) # 無法進行數值運算
+as.numeric(stringInteger)+2
+```
+
+                                                        
+)
+
+```{r}
+a<-c(410773002, 410773015)                                         #have problem    solve
+as.character(a)                                                   #character後只能接一個object 若要接兩個object要分成兩分寫                                                                           或者用c()
+as.character<-c(410773002, 410773015)
+class(a)
+```
+```{r}
+a<-c(410773002, 410773015)                                         #have problem    solve
+as.character(a)                                                   #character後只能接一個object 若要接兩個object要分成兩分寫                                                                           或者用c()
+as.character(410773002)
+as.character(410773015)
+class(a)
+```
+
+
+```{r}
+studentid <-c(410773002, 410773015)
+studentid<- as.character(studentid)
+```
+
+```{r}
+library(lubridate)                                            #為甚麼要多這一行，沒有這一行97行也能夠執行? 沒有的話就不能執行
+```
+
+```{r}
+tpeTime <- ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+
+```{r}
+tpeTime <- ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+
+
+```{r}
+tpeTime <- lubridate::ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+
+```{r}
+pgTime <- mdy_hms("Mar.18, 2020, 05:52:40",
+                  tz="Europe/Lisbon")
+```
+
+```{r}
+tpeTime <- c("2020-03-18 13:52:40",
+             "2020-03-11 03:12:40")
+tpeTime <- 
+  ymd_hms(
+    tpeTime, # 呼叫tpeTime向量值
+    tz="Asia/Taipei"
+    )
+```
+
+```{r}
+tpeTime <- 
+  ymd_hms(
+    c("2020-03-18 13:52:40","2020-03-11 03:12:40"),
+    tz="Asia/Taipei"
+    )                                               #119行相當於129行的意思 是
+```
+
+```{r}
+ymd_hms(
+c("2020-03-18 13:52:40","2020-03-11 03:12:40")
+)
+```
+
+```{r}
+ymd_hms("2020-03-11T06:56:17Z")                     #T跟Z可以蕤便擺放? 只是T要在Z前面就好?  理論上可以 不過實際上有特定常用的標準
+```
+
+
+
+
+
+
+
+
+
+
+
