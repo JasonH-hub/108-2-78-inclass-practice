@@ -35,7 +35,7 @@ my_108_total_credits <- 15
 `108_total_credits` <- 15                                          #數字開頭時，前面要加上反頓點，最後也要記得加反頓點
 `108_total_credits` <- 15
 my_108_total_credits <- 15
-my.108.total_credits <- 15                                         #"_"不能放在開頭
+my.108.total_credits <- 15                                         #"_"不能放在開頭 特殊符號只能用點(.)開頭                                                                                            點凱投只能接字母不能接數字
 `108.total_credits` <- 15 # 隱藏變數
 .my.108.total_credits <- 15
 `我的108學年總學分數` <- 15                                         #開頭不能為中文
