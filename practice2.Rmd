@@ -128,6 +128,13 @@ logi1 <- c(T,TRUE,F,FALSE,FALSE)
 ```
 
 ```{r}
+# 加總向量內的所有元素值。
+sum(logi1)
+```
+
+
+
+```{r}
 num <- c(1.5, 2, 3)
 int <- c(1L, 3L, -2L)                                                
 char <- c("1.5","2","3")
